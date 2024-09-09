@@ -1,0 +1,97 @@
+[
+    {
+        "Drug": "Carboplatin",
+        "GPI": "21100015",
+        "approval": false
+    },
+    {
+        "Drug": "Cisplatin",
+        "GPI": "21100020",
+        "approval": false
+    },
+    {
+        "Drug": "Cyclophosphamide",
+        "GPI": "21101020",
+        "approval": true
+    },
+    {
+        "Drug": "Pertuzumab",
+        "GPI": "21170054",
+        "approval": true
+    },
+    {
+        "Drug": "Trastuzumab",
+        "GPI": "21170070",
+        "approval": true
+    },
+    {
+        "Drug": "Tucatinib",
+        "GPI": "21170080",
+        "approval": true
+    },
+    {
+        "Drug": "Capecitabine",
+        "GPI": "21300005",
+        "approval": true
+    },
+    {
+        "Drug": "Fluorouracil",
+        "GPI": "21300030",
+        "approval": false
+    },
+    {
+        "Drug": "Methotrexate",
+        "GPI": "21300050",
+        "approval": false
+    },
+    {
+        "Drug": "Pembrolizumab",
+        "GPI": "21357953",
+        "approval": true
+    },
+    {
+        "Drug": "Anastrozole",
+        "GPI": "21402810",
+        "approval": true
+    },
+    {
+        "Drug": "Exemestane",
+        "GPI": "21402835",
+        "approval": true
+    },
+    {
+        "Drug": "Letrozole",
+        "GPI": "21402860",
+        "approval": true
+    },
+    {
+        "Drug": "Fulvestrant",
+        "GPI": "21403530",
+        "approval": true
+    },
+    {
+        "Drug": "Docetaxel",
+        "GPI": "21500005",
+        "approval": true
+    },
+    {
+        "Drug": "Paclitaxel",
+        "GPI": "21500012",
+        "approval": true
+    },
+    {
+        "Drug": "Abemaciclib",
+        "GPI": "21531010",
+        "approval": true
+    },
+    {
+        "Drug": "Palbociclib",
+        "GPI": "21531060",
+        "approval": true
+    },
+    {
+        "Drug": "Olaparib",
+        "GPI": "21535560",
+        "approval": true
+    }
+]

@@ -1,0 +1,67 @@
+[
+    {
+        "Drug": "Carboplatin",
+        "GPI": "21100015",
+        "approval": false
+    },
+    {
+        "Drug": "Cisplatin",
+        "GPI": "21100020",
+        "approval": false
+    },
+    {
+        "Drug": "Pembrolizumab",
+        "GPI": "21357953",
+        "approval": false
+    },
+    {
+        "Drug": "Apalutamide",
+        "GPI": "21402410",
+        "approval": true
+    },
+    {
+        "Drug": "Bicalutamide",
+        "GPI": "21402420",
+        "approval": true
+    },
+    {
+        "Drug": "Darolutamide",
+        "GPI": "21402425",
+        "approval": true
+    },
+    {
+        "Drug": "Enzalutamide",
+        "GPI": "21402430",
+        "approval": true
+    },
+    {
+        "Drug": "Flutamide",
+        "GPI": "21402440",
+        "approval": true
+    },
+    {
+        "Drug": "Nilutamide",
+        "GPI": "21402460",
+        "approval": true
+    },
+    {
+        "Drug": "Relugolix",
+        "GPI": "21405570",
+        "approval": true
+    },
+    {
+        "Drug": "Cabazitaxel",
+        "GPI": "21500003",
+        "approval": true
+    },
+    {
+        "Drug": "Docetaxel",
+        "GPI": "21500005",
+        "approval": true
+    },
+    {
+        "Drug": "Olaparib",
+        "GPI": "21535560",
+        "approval": true
+    }
+]

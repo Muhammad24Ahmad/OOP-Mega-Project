@@ -1,0 +1,52 @@
+@startuml sequence
+skinparam style strictuml
+skinparam sequenceParticipant underline
+skinparam sequence {
+    ArrowColor DeepSkyBlue
+    ActorBorderColor DeepSkyBlue
+    ParticipantBorderColor DeepSkyBlue
+    LifeLineBorderColor DeepSkyBlue
+    LifeLineBackgroundColor LightBlue
+}
+ 
+actor User
+ 
+participant "Flask App" as Flask
+participant "PDF Parser" as PDFParser
+participant "Text Cleaner" as TextCleaner
+participant "LLM" as LLM
+participant "NER" as NER
+participant "GPI Codes" as GPICodes
+participant "NIH Approval Check" as NIHApproval
+participant "Report Generator" as ReportGenerator
+ 
+ 
+User -> Flask: upload_pdfs(file attchments)
+Flask -> PDFParser: extract_text_from_pdf(filepaths)
+PDFParser -> TextCleaner: clean_text_file(text)
+ 
+alt User chooses LLM
+    TextCleaner -> LLM: extract_drugs(clean_text)
+    LLM -> Flask: list of Drugs
+else User chooses NER
+    TextCleaner -> NER: extract_drugs(clean_text)
+    NER -> Flask: list of Drugs
+end
+ 
+Flask -> GPICodes: match_drugs_with_gpi(drugs, csv_file_path)
+GPICodes -> Flask: Dictionary of drugs with GPI codes
+Flask -> User: Drug table with GPI codes
+ 
+User -> Flask: nih_approval(cancer_type)
+Flask -> NIHApproval: nih_extract_drugs(Drugs, cancer_type)
+NIHApproval -> NIHApproval: Scrape_nih_website(URL)
+NIHApproval -> NIHApproval: match_drugs_with_nih(drugs, nih_drugs)
+NIHApproval -> Flask: Dictionary of drugs with NIH approval status
+Flask -> User: Approved drugs table
+ 
+User -> Flask: generate_report(extension)
+Flask -> ReportGenerator: generate_report(approved_drugs, extension)
+ReportGenerator -> Flask: report file
+Flask -> User: download report
+ 
+@enduml

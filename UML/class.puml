@@ -1,0 +1,125 @@
+@startuml class
+skinparam linetype ortho
+skinparam class {
+    BackgroundColor White
+    ArrowColor Black
+    BorderColor Black
+}
+
+' Define Classes
+class PDFHandler {
+    - upload_folder : String
+    + __init__(upload_folder : String)
+    + save_pdf(pdf_file : FileStorage) : String
+    + extract_text(filepath : String) : String
+}
+
+class PDFTextExtractor {
+    - pdf_path : String
+    - cleaned_text : String
+    + __init__(pdf_path : String)
+    + clean_text(text : String) : String
+    + extract_text() : String
+    + save_text_to_file(output_text_file : String)
+}
+
+class DrugHandler {
+    - model_option : String
+    - text_content : String
+    + __init__(model_option : String, text_content : String)
+    + extract_drugs() : List
+}
+
+class NERDrugExtractor {
+    + extract_drugs(text : String) : List
+}
+
+class LLMDrugExtractor {
+    + chunk_text(text : String) : List
+    + get_response(prompt : String) : String
+    + prepare_prompt(text_chunk : String) : String
+    + extract_drugs_from_responses(responses : List) : List
+}
+
+class GPIHandler {
+    - csv_file_path : String
+    + __init__(csv_file_path : String)
+    + match_drugs(drugs_list : List) : List
+}
+
+class DrugGPIMapper {
+    - csv_file_path : String
+    + __init__(csv_file_path : String)
+    + match_drugs_with_gpi(drug_list : List) : List
+}
+
+class NIHHandler {
+    - cancer_type : String
+    + __init__(cancer_type : String)
+    + get_approved_drugs(matched_drug_gpi : List) : List
+}
+
+class DrugApprovalChecker {
+    - approved_drugs : Set
+    + __init__(approved_drugs : List)
+    + check_approval(matched_drug_gpi : List) : List
+}
+
+class WebScraper {
+    + scrape(url : String) : String
+}
+
+class NIHDrugExtractor {
+    - soup : BeautifulSoup
+    + __init__(html_content : String)
+    + extract_drugs(section_title : String) : List
+}
+
+class FileHandler {
+    - approved_drugs_list : List
+    - cancer_type : String
+    - model_name : String
+    + __init__(approved_drugs_list : List, cancer_type : String, model_name : String)
+    + generate_file(extension : String) : String
+}
+
+class ReportGenerator {
+    - approved_drugs_list : List
+    - cancer_type : String
+    - model_name : String
+    - directory : String
+    + __init__(approved_drugs_list : List, cancer_type : String, model_name : String)
+    + create_pdf_report() : String
+    + save_to_json_file() : String
+}
+
+class FlaskApp {
+        - app : Flask
+        - UPLOAD_FOLDER : String
+
+        + __init__()
+        + home() : String
+        + demo() : String
+        + upload() : String
+        + nih_check() : String
+        + download() : String
+    }
+
+' Define Relationships
+PDFHandler *-- PDFTextExtractor
+DrugHandler o-- NERDrugExtractor
+DrugHandler o-- LLMDrugExtractor
+GPIHandler *-- DrugGPIMapper
+NIHHandler o-- DrugApprovalChecker
+NIHHandler o-- WebScraper
+NIHHandler o-- NIHDrugExtractor
+FileHandler *-- ReportGenerator
+WebScraper -- LLMDrugExtractor
+DrugGPIMapper -- DrugApprovalChecker
+FlaskApp -- PDFHandler
+FlaskApp -- DrugHandler
+FlaskApp -- GPIHandler
+FlaskApp -- NIHHandler
+FlaskApp -- FileHandler
+
+@enduml

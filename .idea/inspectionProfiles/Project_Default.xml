@@ -1,0 +1,22 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Annotator" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="BuildoutUnresolvedPartInspection" enabled="true" level="TYPO" enabled_by_default="true">
+      <scope name="Project Files" level="WARNING" enabled="true" />
+    </inspection_tool>
+    <inspection_tool class="EditorConfigValueCorrectness" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="scispacy" />
+            <item index="1" class="java.lang.String" itemvalue="nmslib" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SyntaxError" enabled="true" level="TYPO" enabled_by_default="true" />
+    <inspection_tool class="XmlHighlighting" enabled="true" level="TYPO" enabled_by_default="true" />
+  </profile>
+</component>

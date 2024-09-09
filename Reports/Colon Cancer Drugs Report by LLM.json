@@ -1,0 +1,92 @@
+[
+    {
+        "Drug": "Oxaliplatin",
+        "GPI": "21100028",
+        "approval": true
+    },
+    {
+        "Drug": "Pertuzumab",
+        "GPI": "21170054",
+        "approval": false
+    },
+    {
+        "Drug": "Trastuzumab",
+        "GPI": "21170070",
+        "approval": false
+    },
+    {
+        "Drug": "Tucatinib",
+        "GPI": "21170080",
+        "approval": true
+    },
+    {
+        "Drug": "Capecitabine",
+        "GPI": "21300005",
+        "approval": true
+    },
+    {
+        "Drug": "Fluorouracil",
+        "GPI": "21300030",
+        "approval": false
+    },
+    {
+        "Drug": "Bevacizumab",
+        "GPI": "21335020",
+        "approval": true
+    },
+    {
+        "Drug": "Ramucirumab",
+        "GPI": "21335070",
+        "approval": true
+    },
+    {
+        "Drug": "Ipilimumab",
+        "GPI": "21355232",
+        "approval": true
+    },
+    {
+        "Drug": "Nivolumab",
+        "GPI": "21357941",
+        "approval": true
+    },
+    {
+        "Drug": "Pembrolizumab",
+        "GPI": "21357953",
+        "approval": true
+    },
+    {
+        "Drug": "Cetuximab",
+        "GPI": "21360015",
+        "approval": true
+    },
+    {
+        "Drug": "Panitumumab",
+        "GPI": "21360070",
+        "approval": true
+    },
+    {
+        "Drug": "Encorafenib",
+        "GPI": "21532040",
+        "approval": false
+    },
+    {
+        "Drug": "Sotorasib",
+        "GPI": "21532480",
+        "approval": false
+    },
+    {
+        "Drug": "Regorafenib",
+        "GPI": "21533050",
+        "approval": true
+    },
+    {
+        "Drug": "Entrectinib",
+        "GPI": "21533820",
+        "approval": false
+    },
+    {
+        "Drug": "Selpercatinib",
+        "GPI": "21535779",
+        "approval": false
+    }
+]
